@@ -1,0 +1,68 @@
+{
+  "tags": {
+    "allowUnknownTags": false
+  },
+  "source": {
+    "include": ["src"],
+    "exclude": ["src/gl","src/worker","src/wasm"],
+    "includePattern": ".js$",
+    "excludePattern": "(node_modules|worker|test)"
+  },
+  "sourceType": "module",
+  "plugins": [
+    "plugins/markdown",
+    "plugins/summarize"
+  ],
+  "opts": {
+    "template": "node_modules/docdash",
+    "encoding": "utf8",
+    "destination": "./docs/",
+    "recurse": true,
+    "verbose": true
+  },
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "default": {
+      "outputSourceFiles": false,
+      "includeDate": false
+    }
+  },
+  "docdash": {
+    "sort": false,
+    "sectionOrder": [
+      "Namespaces",
+      "Modules",
+      "Classes",
+      "Global",
+      "Mixins"
+    ],
+    "meta": {
+      "title": "KMap API Document",
+      "description": "WebMap version 6 for Careland"
+    },
+    "menu": {
+      "官网": {
+        "href": "https://map.careland.com.cn",
+        "target": "_blank",
+        "class": "menu-item",
+        "id": "website_link"
+      },
+      "开放平台": {
+        "href": "https://open.careland.com.cn",
+        "target": "_blank",
+        "class": "menu-item",
+        "id": "open_link"
+      },
+      "Demo": {
+        "href": "../../../examples/index.html",
+        "target": "_blank",
+        "class": "menu-item",
+        "id": "demo_link"
+      }
+    },
+    "collapse": true,
+    "typedefs": true,
+    "search": true
+  }
+}

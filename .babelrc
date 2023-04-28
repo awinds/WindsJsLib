@@ -1,0 +1,25 @@
+{
+  "compact": true,
+  "minified": true,
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "absoluteRuntime": false,
+        "corejs": 3,
+        "helpers": true,
+        "regenerator": true
+      }
+    ]
+  ]
+}

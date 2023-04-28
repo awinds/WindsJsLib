@@ -1,0 +1,40 @@
+{
+    //环境
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+    //继承，eslint的规则可以继承
+    "extends": [
+        //推荐规则
+        "eslint:recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly",
+        "ENV": true
+    },
+    "parser": "@babel/eslint-parser",
+    //编译选项
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "allowImportExportEverywhere": true
+    },
+    //所应用的插件
+    "plugins": [
+    ],
+    //过滤不检查文件和文件夹
+    "ignorePatterns": [
+        "**/node_modules/**",
+    ],
+    //规则
+    "rules": {
+        "no-unused-vars":"off",
+        "no-unused-labels":"off",
+        "no-mixed-spaces-and-tabs":"off",
+        "no-debugger":"off",
+        "no-empty":"off"
+    }
+}
