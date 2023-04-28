@@ -1,7 +1,7 @@
  # WindsJsLib  
 在开发JsLib的过程中遇到了一些问题，包括ES6的打包，调试，代码检查，单元测试，Worker线程，Sonar发布等等，希望此示例工程能帮助一些人少走弯路。
 
-##使用
+## 使用  
 开始：  
 ```npm
 npm install
@@ -18,7 +18,7 @@ npm run start
 > npm run coverage 单元测试并生成覆盖率到coverage目录  
 > npm run docs 生成接口文档，目录docs/WindsJsLib/{版本号}/  
 
-##问题插件修复 
+## 问题插件修复   
 > - rollup-plugin-web-worker-loader v1.6.1
 >> 1、修改`preserveSource: true`下压缩后报`Cannot read property 'search' of undefined`的问题  
    找到文件：`/node_modules/rollup-plugin-web-worker-loader/src/helper/funcToSource.js`  
@@ -41,7 +41,7 @@ npm run start
 >>source = source.replace(regex, '$1use strict$2');  
 >>lines.push('(' + source + ')()');  
 >>```
->>2、修改`enableUnicode: true`后base64文件过大时decodeBase64报Maximum call stack size exceeded的问题  
+>>2、修改`enableUnicode: true`后base64文件过大时decodeBase64报`Maximum call stack size exceeded`的问题  
      找到文件：`/node_modules/rollup-plugin-web-worker-loader/src/helper/browser/createBase64WorkerFactory.js`  
   >>```
   >>return String.fromCharCode.apply(null, new Uint16Array(binaryView.buffer));
@@ -66,7 +66,7 @@ npm run start
 >>            classString, text);
 >>```
 
-##目录说明  
+## 目录说明  
 ```
 |-- WindsJsLib  
     |-- .babelrc                babel配置文件  
