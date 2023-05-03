@@ -1,6 +1,6 @@
 export default {
     testEnvironment: 'jest-environment-jsdom',
-    setupFiles: ["./test/setup/dom.js"],
+    setupFiles: ["./test/setup/init.js"],
     transform: {
         '^.+\\.jsx?$': 'babel-jest',
     },

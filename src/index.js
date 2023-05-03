@@ -1,20 +1,22 @@
-import Math from "./math/math.js";
-import Dom from "./dom/dom.js";
+import ExampleClass from "./ExampleClass.js";
+import ExampleStatic from "./ExampleStatic.js";
 
-//全局版本号
-const version = '_VERSION_';
-const token = '';
+//全局
+let global = {
+    version: '_VERSION_',
+    token: ''
+};
 
 export default {
-    Math,
-    Dom,
+    ExampleClass,
+    ExampleStatic,
     get token() {
-        return token;
+        return global.token;
     },
     set token(token) {
-        token = token;
+        global.token = token;
     },
     get version() {
-        return version;
+        return global.version;
     }
 }

@@ -1,0 +1,1 @@
+document.body.innerHTML = '<div id="myDom">测试Dom</div>';

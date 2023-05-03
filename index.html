@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+</head>
+<body>
+<div id="myDom">测试Dom</div>
+<div id="demo"></div>
+</body>
+</html>
+<script src="./dist/windsjslib.js"></script>
+<script type="module">
+    //import WindsJsLib from "./src/index.js";
+    WindsJsLib.token = '12345678';
+
+    let opts = {
+        base : 0
+    };
+    let js = new WindsJsLib.ExampleClass(opts);
+    let res = js.getSum(1,3);
+    console.log(res);
+
+    let random = WindsJsLib.ExampleStatic.getRandomNumber();
+
+    WindsJsLib.ExampleStatic.setElementStyle('myDom',{
+        color : 'red'
+    });
+
+    let html = 'WindsJsLib的信息:';
+    html += '<br>version：'+WindsJsLib.version;
+    html += '<br>token：'+WindsJsLib.token;
+    html += '<br>sum结果：'+res;
+    html += '<br>random：'+random;
+    document.getElementById('demo').innerHTML = html;
+</script>
